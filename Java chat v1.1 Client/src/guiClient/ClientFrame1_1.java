@@ -51,6 +51,9 @@ public class ClientFrame1_1 extends JFrame implements Runnable{
 	
 
 	private static final long serialVersionUID = 101;
+	private final String hostname = "vladflorescuserver.ddns.net";
+	private final int port = 36705;
+	
 	private final String LINK_ATTRIBUTE = "linkAtt";
 	private final int BUFFER_SIZE = 65536;
 	private String client;
@@ -113,7 +116,7 @@ public class ClientFrame1_1 extends JFrame implements Runnable{
 					}
 					
 					
-					socket = new Socket("vladflorescuserver.ddns.net",36705);
+					socket = new Socket(hostname, port);
 					client = startWindowUsernameTextField.getText();//.toLowerCase();
 					isConnected=true;
 					
@@ -307,7 +310,7 @@ public class ClientFrame1_1 extends JFrame implements Runnable{
 			transferSocket = null;
 			
 			try {
-				transferSocket = new Socket("vladflorescuserver.ddns.net", 36705);
+				transferSocket = new Socket(hostname, port);
 				
 			} catch (IOException e) {
 				
@@ -433,7 +436,7 @@ public class ClientFrame1_1 extends JFrame implements Runnable{
 			downloadSocket = null;
 			 	
 			try {
-				downloadSocket = new Socket("vladflorescuserver.ddns.net", 36705);
+				downloadSocket = new Socket(hostname, port);
 				
 			} catch (IOException e) {
 				

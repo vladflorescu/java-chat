@@ -19,6 +19,7 @@ import vlad.utilities.*;
 public class GUIServer1_1 {
 	
 	private static final int BUFFER_SIZE = 65536;
+	private static final int port = 36705;
 	
 	private static ServerSocket serverSocket;
 	private static ArrayList<DataOutputStream> clientsDataOutputStreams;
@@ -421,7 +422,7 @@ public class GUIServer1_1 {
 		
     	System.out.println(InetAddress.getLocalHost().getHostAddress());
 		clientsDataOutputStreams = new ArrayList<DataOutputStream>();
-		serverSocket = new ServerSocket(36705);
+		serverSocket = new ServerSocket(port);
 		
 		while(true){
 			Socket socket = serverSocket.accept();

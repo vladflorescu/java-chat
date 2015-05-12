@@ -16,4 +16,3 @@ public class GUIClient1_1{
 	}
 	
 }
-	
